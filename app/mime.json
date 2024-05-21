@@ -1,0 +1,10 @@
+{
+  ".html" : "text/html",
+  ".css"  : "text/css",
+  ".png"  : "image/png",
+  ".js"   : "text/javascript",
+  ".woff" : "application/font-woff",
+  ".ttf"  : "application/font-ttf",
+  ".svg"  : "image/svg+xml",
+  ".json" : "application/json"
+}
