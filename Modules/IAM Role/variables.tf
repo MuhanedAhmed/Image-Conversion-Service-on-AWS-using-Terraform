@@ -13,6 +13,12 @@ variable "role_name" {
   type        = string
 }
 
+variable "tags" {
+  description = "Tags to assign to the IAM role."
+  type        = map(string)
+  default     = {}
+}
+
 
 # --------------------------------------------------------------
 # Variables for iam policy 
@@ -70,7 +76,3 @@ variable "statements" {
     resources = list(string)
   }))
 }
-
-
-
-

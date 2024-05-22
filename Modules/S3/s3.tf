@@ -12,11 +12,7 @@ resource "aws_s3_bucket" "S3-bucket" {
   bucket        = var.bucket_name
   force_destroy = true
 
-
-  tags = {
-    Deployment_method = "Terraform"
-    Environment       = "Testing"
-  }
+  tags = var.tags
 }
 
 

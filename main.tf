@@ -1,4 +1,3 @@
-
 # --------------------------------------------------------------
 # Creating S3 bucket for web hosting
 # --------------------------------------------------------------
@@ -113,7 +112,7 @@ module "cognito-role" {
   role_name          = "CognitoGuestRole"
   policy_name        = "CognitoGuestPolicy"
   policy_description = "A policy for Amazon Cognito identity pool to allow getting credentials, uploading and downloading images."
-  actions            = ["sts:AssumeRoleWithWebIdentity"]
+  actions            = ["sts:AssumeRoleWithWebIdentity"] 
   principals = [
     {
       type        = "Federated"
@@ -149,6 +148,11 @@ module "cognito-role" {
       resources = ["*"]
     }
   ]
+
+  tags = {
+    Deployment_method = "Terraform"
+    Environment       = "Testing"
+  }
 }
 
 
@@ -192,6 +196,11 @@ module "lambda-role" {
       resources = ["arn:aws:logs:*:*:*"]
     }
   ]
+
+  tags = {
+    Deployment_method = "Terraform"
+    Environment       = "Testing"
+  }
 }
 
 
